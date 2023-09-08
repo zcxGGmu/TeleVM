@@ -1,0 +1,25 @@
+[package]
+name = "address_space"
+version = "2.2.0"
+authors = ["Huawei StratoVirt Team"]
+edition = "2021"
+license = "Mulan PSL v2"
+description = "provide memory management for VM"
+
+[dependencies]
+libc = "0.2"
+log = "0.4"
+kvm-ioctls = { path = "../kvm-ioctls"}
+kvm-bindings = { path = "../kvm-bindings", features = ["fam-wrappers"]}
+vmm-sys-util = ">=0.10.0"
+arc-swap = ">=1.5.0"
+thiserror = "1.0"
+anyhow = "1.0"
+hypervisor = { path = "../hypervisor" }
+machine_manager = { path = "../machine_manager" }
+migration = { path = "../migration" }
+migration_derive = { path = "../migration_derive" }
+util = { path = "../util" }
+
+[dev-dependencies]
+serial_test = "0.5.1"

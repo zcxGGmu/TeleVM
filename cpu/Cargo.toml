@@ -1,0 +1,28 @@
+[package]
+name = "cpu"
+version = "2.2.0"
+authors = ["Huawei StratoVirt Team", "China Telecom"]
+edition = "2023"
+license = "Mulan PSL v2"
+description = "CPU emulation"
+
+[dependencies]
+thiserror = "1.0"
+anyhow = "1.0"
+kvm-ioctls = { path = "../kvm-ioctls"}
+kvm-bindings = { path = "../kvm-bindings", features = ["fam-wrappers"]}
+log = "0.4"
+libc = "0.2"
+vmm-sys-util = ">=0.10.0"
+hypervisor = { path = "../hypervisor" }
+machine_manager = { path = "../machine_manager" }
+migration = { path = "../migration" }
+migration_derive = { path = "../migration_derive" }
+util = { path = "../util" }
+
+[dev-dependencies]
+serial_test = "0.5.1"
+
+[features]
+default = []
+boot_time = []

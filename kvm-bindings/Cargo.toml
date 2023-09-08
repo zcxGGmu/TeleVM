@@ -1,0 +1,13 @@
+[package]
+name = "kvm-bindings"
+version = "0.1.0"
+edition = "2023"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+fam-wrappers = ["vmm-sys-util"]
+
+[dependencies]
+vmm-sys-util = { version = ">=0.10.0", optional = true }
+

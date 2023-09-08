@@ -1,0 +1,18 @@
+[package]
+name = "boot_loader"
+version = "2.2.0"
+authors = ["Huawei StratoVirt Team", "China Telecom"]
+edition = "2023"
+license = "Mulan PSL v2"
+
+[dependencies]
+thiserror = "1.0"
+anyhow = "1.0"
+kvm-ioctls = { path = "../kvm-ioctls"}
+kvm-bindings = { path = "../kvm-bindings"}
+libc = "0.2"
+log = "0.4"
+vmm-sys-util = ">=0.10.0"
+address_space = { path = "../address_space" }
+devices = { path = "../devices" }
+util = { path = "../util" }

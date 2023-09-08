@@ -1,0 +1,24 @@
+[package]
+name = "devices"
+version = "2.2.0"
+authors = ["Huawei StratoVirt Team", "China Telecom"]
+edition = "2023"
+license = "Mulan PSL v2"
+
+[dependencies]
+thiserror = "1.0"
+anyhow = "1.0"
+libc = "0.2"
+log = "0.4"
+kvm-ioctls = { path = "../kvm-ioctls"}
+kvm-bindings = { path = "../kvm-bindings"}
+vmm-sys-util = ">=0.10.0"
+byteorder = "1.4.3"
+drm-fourcc = ">=2.2.0"
+address_space = { path = "../address_space" }
+hypervisor = { path = "../hypervisor" }
+machine_manager = { path = "../machine_manager" }
+migration = { path = "../migration" }
+migration_derive = { path = "../migration_derive" }
+sysbus = { path = "../sysbus" }
+util = { path = "../util" }
